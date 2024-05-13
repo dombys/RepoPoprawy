@@ -15,11 +15,6 @@ int check_Hex(const char *str) {
   }
   return 1;
 }
-//funckja dodajaca i wywolujaca
-void wywolanie(int pom1, int pom2, int pom3){
-dodaj(pom1, pom2);
-}
-
 //inicjalizacja programu, liczba argumentów, argumenty terminala w tablicy
 int main(int argc, char *argv[]) {
   if (argc != 4) {
@@ -169,16 +164,14 @@ int main(int argc, char *argv[]) {
     for (int i = strlen1; i > 0; i--){
     pom1 = wynik[i];
     pom2 = przepisana[i];
-    pom3 = dodaj(pom1, pom2);
-    Final[i] = pom3;
+    Final[i] = dodaj(pom1, pom2);
     }
   }
   if (strlen1 < strlen2){
     for (int i = strlen2; i > 0; i--){
     pom1 = wynik[i];
     pom2 = przepisana[i];
-    pom3 = dodaj(pom1, pom2);
-    Final[i] = pom3;
+    Final[i] = dodaj(pom1, pom2);
     }
   }
   //obsługa przeniesienia
