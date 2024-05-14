@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
   char *num1 = argv[1];
   char *znak = argv[2];
   char *num2 = argv[3];
-  int pom1, pom2, pom3;
+  int pom1, pom2;
 
   //Obliczenie dlugosci stringów
   int strlen1 = strlen(num1);
@@ -82,12 +82,12 @@ int main(int argc, char *argv[]) {
     Final[i] = 0x00;
   }
 
-  //testowe printy na wypisanie liczb podawanych w terminalu oraz na dlugosc stringa
+ /* //testowe printy na wypisanie liczb podawanych w terminalu oraz na dlugosc stringa
   printf("%d\n", strlen1);
   printf("%d\n", strlen2);
   printf("Num1 to %s\n", num1);
   printf("Num2 to %s\n", num2);
-
+  */
   // konwersja pierwszej liczby
   for (int i = 0; i < strlen1; i++) {
     char c = num1[i];
@@ -111,8 +111,8 @@ int main(int argc, char *argv[]) {
       Num2[i + 1] = c - 'a' + 10;
     }
   }
-
-  //testowe wypisanie tablic przed i po konwersji hex
+/*
+  //testowe wypisanie tablic
   printf("Num1: ");
   for (int i = 0; i < strlen1 + 1; i++) {
     printf("%x", Num1[i]);
@@ -124,7 +124,7 @@ int main(int argc, char *argv[]) {
     printf("%x", Num2[i]);
   }
   printf("\n");
-
+*/
   //przepisanie liczb do tablic wynik i przepisana z uwzględnieniem długości
   // Wypełnienie tablic wynik i przepisana, wyrównując krótszą liczbę zerami na początku
   if (strlen1 >= strlen2) {
@@ -145,7 +145,7 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  //sprawdzenie czy przepisano dobrze
+/*  //sprawdzenie czy przepisano dobrze
   printf("Przepisane tablice przed przekazaniem\n");
   printf("Wynik: ");
   for (int i = 0; i < maxlen; i++) {
@@ -158,7 +158,7 @@ int main(int argc, char *argv[]) {
     printf("%x", przepisana[i]);
   }
   printf("\n");
-
+*/
   // Wywołanie funkcji dodaj, pętla przekazuje liczby z tablic
   if (strlen1 >= strlen2){
     for (int i = strlen1; i > 0; i--){
@@ -191,9 +191,12 @@ int main(int argc, char *argv[]) {
     }
     }
   }
-  
+  //drukowanie liczb
+  printf("%s\n", num1);
+  printf("%s\n", znak);
+  printf("%s\n", num2);
  //wypisanie wyniku (kod asm modyfikuje tablicę wynik)
-  printf("Wynik działania to:\n");
+  //printf("Wynik działania to:\n");
   for (int i = 0; i < maxlen; i++) {
     printf("%x", Final[i]);
   }
