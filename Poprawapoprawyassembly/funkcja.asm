@@ -4,12 +4,9 @@ section .text
 dodaj:
   	enter 0,0
 readyoffsets:
-	mov eax, [ebp+8] ;wskazanie na 1. tablice
-	mov esi, eax ;offset tablicy 1.
-	mov eax, [ebp + 12] ;wskazanie na 2. tablice
-	mov edi, eax
-	mov eax, [ebp + 16] ;element tablicy
-	mov ecx, eax
+	mov esi, [ebp + 8]
+	mov edi, [ebp + 12]
+	mov ecx, [ebp + 16]
 add:
 	add esi, ecx ;ustawienie wskaźnika tablicy 1
 	add edi, ecx ;ustawienie wskaźnika tablicy 2
