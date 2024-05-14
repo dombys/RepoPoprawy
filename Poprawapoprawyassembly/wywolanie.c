@@ -80,13 +80,13 @@ int main(int argc, char *argv[]) {
     Num2[i] = 0x00;
     Final[i] = 0x00;
   }
-
+/*
   //testowe printy na wypisanie liczb podawanych w terminalu oraz na dlugosc stringa
   printf("%d\n", strlen1);
   printf("%d\n", strlen2);
   printf("Num1 to %s\n", num1);
   printf("Num2 to %s\n", num2);
-
+*/
   // konwersja pierwszej liczby
   for (int i = 0; i < strlen1; i++) {
     char c = num1[i];
@@ -110,7 +110,7 @@ int main(int argc, char *argv[]) {
       Num2[i + 1] = c - 'a' + 10;
     }
   }
-
+/*
   //testowe wypisanie tablic przed i po konwersji hex
   printf("Num1: ");
   for (int i = 0; i < strlen1 + 1; i++) {
@@ -123,7 +123,7 @@ int main(int argc, char *argv[]) {
     printf("%x", Num2[i]);
   }
   printf("\n");
-
+*/
   //przepisanie liczb do tablic wynik i przepisana z uwzględnieniem długości
   // Wypełnienie tablic wynik i przepisana, wyrównując krótszą liczbę zerami na początku
   if (strlen1 >= strlen2) {
@@ -143,7 +143,7 @@ int main(int argc, char *argv[]) {
       przepisana[i] = Num2[i];
     }
   }
-
+/*
   //sprawdzenie czy przepisano dobrze
   printf("Przepisane tablice przed przekazaniem\n");
   printf("Wynik: ");
@@ -158,6 +158,7 @@ int main(int argc, char *argv[]) {
   }
   printf("\n");
   printf("\n"); //dla lepszej czytelności wynik oddzielono podwójną n-ką
+  */
   //wywołanie funkcji assembly
   if (strlen1 >= strlen2){
   for (int i=strlen1; i > 0; i--){
@@ -186,7 +187,11 @@ int main(int argc, char *argv[]) {
     }
     }
   }  
-
+  
+  //wypisanie w terminalu
+  printf("%s\n", num1);
+  printf("%s\n", znak);
+  printf("%s\n", num2);
   for (int i = 0; i < maxlen; i++) {
     printf("%x", Final[i]);
   }
