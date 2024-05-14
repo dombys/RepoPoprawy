@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 //zadeklarowanie wywołania
-extern int dodaj(char *a, char *b, char d);
+extern int dodaj(char *a, char *b, int c);
 
 //funkcja na sprawdzenie czy string zawiera tylko znaki uzywane w hex
 int check_Hex(const char *str) {
@@ -157,6 +157,7 @@ int main(int argc, char *argv[]) {
     printf("%x", przepisana[i]);
   }
   printf("\n");
+  printf("\n"); //dla lepszej czytelności wynik oddzielono podwójną n-ką
   //wywołanie funkcji assembly
   if (strlen1 >= strlen2){
   for (int i=strlen1; i > 0; i--){
