@@ -1,0 +1,52 @@
+Ostatnie zadanie programistyczne
+
+C + asm
+By nie robić w asm żmudznych rzeczy jak parsownanie.
+
+
+Dzisiaj:
+Kooprocesor (FPU)
+
+Wyjątki szczególnie O_O ?
+Sposoby zaokrąglenia
+
+Kalkulator
+32-bit liczby dword
+
+Dodawanie, mnożenie, dzielenie, odejmowanie
+
+7 + 8 w linii
+parsowanie w C
+wypisz wynik -> dziesiętnie
+
+asm ma robić funkcje
+2 parametry -> skłdniki działania
+Zwróci wartość -> wynik przez wartość -> eax
+Dziesiętnie
+
+
+C -> string 3.14 -> parsujemy na floata
+
+Sposoby zaokrąglania zrobić
+Jak mamy je wywoływać ?
+dodatkowy parametr z wiersza:
+num1 znak num2 sposób_zaokrąglania
+0
+1
+2
+3
+4 osobne pliki pod funkcje + 4 osobne pliki do zaokrąglenia + 1 plik w C
+Musimy obsługiwać wyjątki w assembly (szczególnie w dzieleniu)
+Switch -> parametr ostatni może nie być podany.
+Jako liczbę INF jako parametr równiania -> dodatkowe punkty.
++/- INF, NaN i +0 -0
+Wyjątki:
+- stack underflow (raczej nie wydarzy)
+- liczba underflow/overflow (za duża/za mała liczba w rejestr)
+- dzielenie przez 0
+
+Zaokrąglanie, wyjątki (Słowo kontrolne -> zamiast wyniku to wypisujemy jaki wyjątek)
+
+Next: MMX SSE
+Czyta plik .wav -> parametr wiersza jako nazwa pliku -> dojście do sampli -> zrobić program, który przeiteruje po samplach i doda do niego +30% (jako demo)
+I niech zapisuje nowy plik.
